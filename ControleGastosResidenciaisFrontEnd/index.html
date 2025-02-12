@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos Residenciais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Sistema de Controle Financeiro</h1>
+
+        <!-- Cadastro de Pessoas -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Cadastro de Pessoas</h2>
+            </div>
+            <div class="card-body">
+                <form id="personForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Idade</label>
+                        <input type="number" class="form-control" id="age" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar Pessoa</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Lista de Pessoas -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Pessoas Cadastradas</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="peopleList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cadastro de Transações -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Cadastro de Transações</h2>
+            </div>
+            <div class="card-body">
+                <form id="transactionForm">
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descrição</label>
+                        <input type="text" class="form-control" id="description" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Valor</label>
+                        <input type="number" step="0.01" class="form-control" id="amount" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Tipo</label>
+                        <select class="form-control" id="type" required>
+                            <option value="receita">Receita</option>
+                            <option value="despesa">Despesa</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="personId" class="form-label">Pessoa</label>
+                        <select class="form-control" id="personId" required></select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar Transação</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Resumo Financeiro -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Resumo Financeiro</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Pessoa</th>
+                                <th>Total Receitas</th>
+                                <th>Total Despesas</th>
+                                <th>Saldo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="financialSummary"></tbody>
+                        <tfoot id="totalSummary"></tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
