@@ -1,0 +1,6 @@
+@ControleDeGastosResidenciaisAPI_HostAddress = http://localhost:5063
+
+GET {{ControleDeGastosResidenciaisAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

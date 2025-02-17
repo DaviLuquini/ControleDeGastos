@@ -1,9 +1,9 @@
-using ControleGastosResidenciais.Domain.Models.PessoaModel;
-using ControleGastosResidenciais.Domain.Models.TransacaoModel;
+using ControleGastosResidenciaisAPI.Domain.Models.PessoaModel;
+using ControleGastosResidenciaisAPI.Domain.Models.TransacaoModel;
 
 namespace ControleGastosResidenciaisTeste
 {
-    //Classe de testes para acompanhar processo de construção do sistema
+    //Classe de testes para acompanhar processo de construção dos Models
     public class ModelsTestes
     {
         [SetUp]
@@ -65,9 +65,9 @@ namespace ControleGastosResidenciaisTeste
             Pessoa pessoa1 = new("Davi", 20);
             Pessoa pessoa2 = new("Laura", 19);
 
-            Transacao transacao1 = new(pessoa1.Identificador, "Salário do mês", 2000, Tipo.Receita);
-            Transacao transacao2 = new(pessoa1.Identificador, "Venda de carro", 50000, Tipo.Receita);
-            Transacao transacao3 = new(pessoa2.Identificador, "Mercado do mês", 1000, Tipo.Despesa);
+            Transacao transacao1 = new(pessoa1.Identificador, "Salário do mês", 2000, TipoTransacao.Receita);
+            Transacao transacao2 = new(pessoa1.Identificador, "Venda de carro", 50000, TipoTransacao.Receita);
+            Transacao transacao3 = new(pessoa2.Identificador, "Mercado do mês", 1000, TipoTransacao.Despesa);
 
             Pessoa.DeletarPessoa(pessoa2.Identificador);
 
