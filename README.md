@@ -15,4 +15,12 @@ Instale as dependências do projeto frontend: <br>
 npm install <br>
 Inicie o servidor de desenvolvimento: <br>
 npm run dev <br>
-O frontend estará disponível em http://localhost:5173 (por padrão).
+O frontend estará disponível em http://localhost:5173 (por padrão). <br>
+
+Algumas imagens do projeto rodando: <br>
+BackEnd API
+![Captura de tela 2025-02-17 144137](https://github.com/user-attachments/assets/74e57632-1a0e-4755-8971-747affb48284) 
+<br>
+FrontEnd
+![Captura de tela 2025-02-17 144208](https://github.com/user-attachments/assets/37ba6460-9356-4d1d-832c-5146d85f1e7f)
+![Captura de tela 2025-02-17 144254](https://github.com/user-attachments/assets/820f0050-33c9-4e2b-915c-b9f9dca61603)
